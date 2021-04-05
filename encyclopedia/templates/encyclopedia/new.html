@@ -1,0 +1,18 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    Create
+{% endblock %}
+
+{% block body %}
+    <form method="post" action="{% url 'new' %}" autocomplete="off">
+        {% csrf_token %}
+        <!-- <h1>Create new page:</h1>
+        <hr> -->
+        <h2>New Title: {{create.new_title}}</h2>
+            {{create.textarea}}
+        <br>
+        <button class="btn btn-outline-success" type="submit">Save <i class='far fa-save'></i></button>
+        <!-- <input class="btn btn-outline-success" type="submit" value="Save"/> -->
+    </form>
+{% endblock %}

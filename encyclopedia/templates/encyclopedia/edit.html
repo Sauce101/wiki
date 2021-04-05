@@ -1,0 +1,15 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    Edit
+{% endblock %}
+
+{% block body %}
+    <form method="post">
+    	{% csrf_token %}
+    	<h3 class="mt-3">Edit this page using Makdown</h3>
+		{{edit}}
+        <br>
+        <button class="btn btn-outline-success" type="submit">Save <i class='far fa-save'></i></button>
+	</form>
+{% endblock %}

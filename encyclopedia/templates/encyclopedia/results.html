@@ -1,0 +1,20 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    Search Results
+{% endblock %}
+
+{% block body %}
+<div class="ml-3 mt-3">
+	<h3>Search Results:</h3>
+	<hr>
+	<ul>
+		{% for item in checked %}
+	        <li><a href="{% url 'wiki' item %}">{{item}}</a></li>
+	        {% empty %}
+	            <h3>No results please try again</h3>
+    	{% endfor %}
+	</ul>
+    
+</div>
+{% endblock %}

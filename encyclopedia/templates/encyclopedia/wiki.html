@@ -1,0 +1,16 @@
+{% extends "encyclopedia/layout.html" %}
+{% load static %}
+
+
+{% block title %}
+    {{title}}
+{% endblock %}
+
+{% block body %}
+	<div class="mr-2">
+		{{entry|safe}}
+		<br>
+		<hr>
+		<a class="btn btn-sm btn-outline-secondary" href="{% url 'edit' title %}">Edit Page: <i class='far fa-edit'></i></a>
+	</div>
+{% endblock %}
